@@ -1,9 +1,58 @@
 {
   {
-    name: "Brute"
-  },
-  {
-
+    name: "Scout",
+    attack: 8,
+    speed: 1,
+    hp: 20,
+    defense: 0
   }
-
+  {
+    name: "Fighter",
+    attack: 10,
+    speed: 0,
+    hp: 25,
+    defense: 0
+  }
+  {
+    name: "Brute",
+    attack: 12,
+    speed: -1,
+    hp: 30,
+    defense: 1
+  }
+  {
+    name: "Defender",
+    attack: 3,
+    speed: 1,
+    hp: 35,
+    defense: 1
+  }
+  {
+    name: "Hunter",
+    attack: 5,
+    speed: 1,
+    hp: 10,
+    defense: 0
+  }
+  {
+    name: "Archer",
+    attack: 6,
+    speed: 0,
+    hp: 10,
+    defense: 0
+  }
+  {
+    name: "Trapper",
+    attack: 8,
+    speed: -1,
+    hp: 20,
+    defense: 0
+  }
+  {
+    name: "Slasher",
+    attack: 7,
+    speed: 1,
+    hp: 15,
+    defense: 0
+  }
 }
