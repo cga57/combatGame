@@ -1,6 +1,5 @@
 class Player:
   def __init__(self):
-    pass
+    self.selectedUnits = []
   
-  def __str__(self):
     
