@@ -1,6 +1,7 @@
 import sys
 import json
 import random
+from typing import List
 
 import ENEMY
 import PLAYER
@@ -43,10 +44,6 @@ def combat(player1, player2, player1AttackList, player2AttackList):
       damage = 0
     unitHp = unitHp - damage
 
-  # for x in range(len(player2.selectedUnits)):
-  #   if(player2.selectedUnits[x].hp <= 0):
-  #     player2.selectedUnits.remove(player2.selectedUnits[x])
-
   for x in range(len(player1AttackList)):
     unitHp = player1.selectedUnits[x].hp
     attack = player1.selectedUnits[x].attack
@@ -56,7 +53,13 @@ def combat(player1, player2, player1AttackList, player2AttackList):
       damage = 0
     unitHp = unitHp - damage
     if(unitHp <= 0):
-      player1.selectedUnits.remove(player1.selectedUnits[x].name)
+      player1.selectedUnits[x].inUse = False
+  
+  newList = []
+  for i in range(len(player1.selectedUnits)):
+    if(player1.selectedUnits[i].inUse == True):
+      newList.append(player1.selectedUnits[i])
+  player1.selectedUnits[i] = newList
 
 def printInfo(player):
   for x in range(len(player.selectedUnits)):

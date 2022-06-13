@@ -5,6 +5,7 @@ class Enemy:
     self.hp = hp
     self.attack = attack
     self.defence = defence
+    self.inUse = False
   def __str__(self):
     return self.name
   def enemyInfo(self):
